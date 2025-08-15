@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Site Acessível — Felipe Lima</title>
+  <meta name="description" content="Exemplo mínimo de acessibilidade: A+/A-, alto contraste, alt em imagens e ARIA.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav class="container">
+      <a href="#inicio" class="logo" aria-label="Ir para o início">Felipe Lima</a>
+
+      <!-- Menu de acessibilidade mínimo -->
+      <div class="acessibilidade">
+        <button id="btn-acess" class="btn" aria-controls="painel-acess" aria-expanded="false" aria-label="Abrir menu de acessibilidade">
+          Acessibilidade
+        </button>
+        <div id="painel-acess" class="painel" aria-hidden="true" role="group" aria-label="Opções de acessibilidade">
+          <button id="mais-fonte" class="btn" aria-label="Aumentar fonte">A+</button>
+          <button id="menos-fonte" class="btn" aria-label="Diminuir fonte">A-</button>
+          <button id="contraste" class="btn" aria-label="Ativar alto contraste">Alto contraste</button>
+        </div>
+      </div>
+
+      <ul class="menu">
+        <li><a href="#inicio">Início</a></li>
+        <li><a href="#conteudo">Conteúdo</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="inicio" class="container">
+    <section class="hero">
+      <h1>Site Acessível — Projeto de Felipe Lima</h1>
+      <p>Versão mínima com os itens pedidos: A+/A-, alto contraste, alt nas imagens e ARIA básico.</p>
+      <img src="img/banner.png" alt="Imagem de banner com moldura e o texto 'Site Acessível — Felipe Lima' (ilustrativa)">
+    </section>
+
+    <section id="conteudo">
+      <h2>Conteúdo fictício</h2>
+      <p>
+        Este texto é apenas um exemplo para demonstrar o ajuste de fonte e o tema de alto contraste.
+        A imagem abaixo também contém texto alternativo.
+      </p>
+      <figure>
+        <img src="img/foto.png" alt="Pessoa tocando violão, imagem ilustrativa em tom neutro">
+        <figcaption>Figura 1 — Imagem ilustrativa com texto alternativo.</figcaption>
+      </figure>
+    </section>
+
+    <section id="contato">
+      <h2>Contato</h2>
+      <form>
+        <label for="nome">Nome</label>
+        <input id="nome" type="text" placeholder="Seu nome" required>
+
+        <label for="email">E-mail</label>
+        <input id="email" type="email" placeholder="seu@email.com" required>
+
+        <label for="msg">Mensagem</label>
+        <textarea id="msg" rows="4" placeholder="Escreva sua mensagem"></textarea>
+
+        <button type="submit" class="btn">Enviar</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="container">
+    <p>Projeto didático — Felipe Lima • 2025</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
